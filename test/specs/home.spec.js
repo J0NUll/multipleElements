@@ -7,7 +7,12 @@ describe('My home page', () => {
 
     })
 
-   
+    it('should verify list items', async () => {
+        await homePage.open()
+        await expect(homePage.listExamples).not.toBeElementsArrayOfSize(45);
+
+    })
+    
         
 
 });
