@@ -51,15 +51,27 @@ export const config = {
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://saucelabs.com/platform/platform-configurator
     //
-    capabilities: [{
-    
+    capabilities: [
+        {
+            maxInstances: 5,
+            browserName: 'chrome',
+            acceptInsecureCerts: true
+        },
+        {
+            maxInstances: 5,
+            browserName: 'MicrosoftEdge',
+            acceptInsecureCerts: true
+        },
+        {
+            maxInstances: 5,
+            browserName: 'firefox',
+            acceptInsecureCerts: true
         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.
-        maxInstances: 5,
+        
         //
-        browserName: 'chrome',
-        acceptInsecureCerts: true
+        
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
         // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
@@ -112,7 +124,7 @@ export const config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: ['chromedriver'],
+    services: [ ],
     
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
