@@ -12,7 +12,11 @@ describe('Heroku Checkbox Page', () => {
             console.log(await elements.btnNumber)
             await expect(elements.btnNumber).toBeElementsArrayOfSize(4);
             
-        
+            for (let i=0;i<3;i++){
+                await elements.addButton.click()
+            }
+
+
     })
 
     
